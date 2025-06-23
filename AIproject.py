@@ -25,7 +25,7 @@ if generate and subject.strip():
                 selected_joke = random.choice(results.tolist())
                 st.success("Here it comes:")
                 st.write(profanity.censor(selected_joke))
-                st.image("https://1000logos.net/wp-content/uploads/2023/05/Laughing-Emoji.png", use_column_width=True)
+                st.image("https://us-tuna-sounds-images.voicemod.net/c89d1b0a-faec-4851-82ec-b5b744c8596a-1716487115187.png", use_column_width=True)
             else:
                 st.error("Sorry, no jokes found about that subject 🌚")
     else:
@@ -34,7 +34,7 @@ if generate and subject.strip():
             selected_joke = random.choice(results.tolist())
             st.success("Here it comes:")
             st.write(selected_joke)
-            st.image("https://1000logos.net/wp-content/uploads/2023/05/Laughing-Emoji.png", use_column_width=True)
+            st.image("https://us-tuna-sounds-images.voicemod.net/c89d1b0a-faec-4851-82ec-b5b744c8596a-1716487115187.png", use_column_width=True)
         else:
             st.error("Sorry, no jokes found about that subject 🌚")
 
