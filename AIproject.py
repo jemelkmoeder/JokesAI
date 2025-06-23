@@ -25,7 +25,7 @@ if subject:
             if not results.empty:
                 selected_joke = random.choice(results.tolist())
                 censored_joke = profanity.censor(selected_joke)
-                st.success("Here it comes:"")
+                st.success("Here it comes:")
                 st.write(censored_joke)
             else:
                 st.error("Sorry, no jokes found about that subject 😅")
