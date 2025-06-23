@@ -1,25 +1,39 @@
+import streamlit as st
 import pandas as pd
+import random
 from better_profanity import profanity
- 
-df = pd.read_csv("C:/Users/jboen/OneDrive/Desktop/AI Informatica/shortjokes.csv")
 
-Jokes = df["Joke"].dropna()  
- 
-censor = input("\nDo you want to censor the jokes? (yes or no) ")
-Subject = input("What subject do you want to hear a joke about? ").lower()
- 
-if censor == ("yes" or "Yes" or "yes." or "Yes." or "YES" or "YES."):
-    profanity.load_censor_words()
-    if profanity.contains_profanity(Subject):
-        print("this subject is innapropriate 😬")
-        exit()
- 
-resultaten = Jokes[Jokes.str.lower().str.contains(Subject)]
- 
-if not resultaten.empty:
-    import random
-    Joke = random.choice(resultaten.tolist())
-    print("\nHere it comes:")
-    print(Joke)
-else:
-    print("Sorry, no jokes found about that subject 😅")
+# Laad dataset
+df = pd.read_csv("C:/Users/jboen/OneDrive/Desktop/AI Informatica/shortjokes.csv")
+jokes = df["Joke"].dropna()
+
+# Streamlit interface
+st.title("🎭 Grapgenerator")
+
+censor = st.checkbox("Censureer ongepaste taal")
+subject = st.text_input("Over welk onderwerp wil je een grap horen?")
+
+if subject:
+    lower_subject = subject.lower()
+
+    if censor:
+        profanity.load_censor_words()
+        if profanity.contains_profanity(lower_subject):
+            st.warning("Dat onderwerp is ongepast 😬")
+        else:
+            results = jokes[jokes.str.lower().str.contains(lower_subject)]
+            if not results.empty:
+                selected_joke = random.choice(results.tolist())
+                censored_joke = profanity.censor(selected_joke)
+                st.success("Hier komt 'ie:")
+                st.write(censored_joke)
+            else:
+                st.error("Sorry, geen grappen gevonden over dat onderwerp 😅")
+    else:
+        results = jokes[jokes.str.lower().str.contains(lower_subject)]
+        if not results.empty:
+            selected_joke = random.choice(results.tolist())
+            st.success("Hier komt 'ie:")
+            st.write(selected_joke)
+        else:
+            st.error("Sorry, geen grappen gevonden over dat onderwerp 😅")
