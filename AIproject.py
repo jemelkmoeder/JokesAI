@@ -25,7 +25,7 @@ if generate and subject.strip():
                 selected_joke = random.choice(results.tolist())
                 st.success("Here it comes:")
                 st.markdown(f"*****{profanity.censor(selected_joke)}*****")
-                st.image("https://media.tenor.com/U2wR936x8rcAAAAM/bursting-out-laughing-laughing.gif", use_container_width =True)
+                st.image("https://i.pinimg.com/236x/a0/59/77/a0597759dcc41257b3e0fac0a4854a4b.jpg", use_container_width =True)
             else:
                 st.error("Sorry, no jokes found about that subject 🌚")
     else:
@@ -34,7 +34,7 @@ if generate and subject.strip():
             selected_joke = random.choice(results.tolist())
             st.success("Here it comes:")
             st.markdown(f"*****{selected_joke}*****")
-            st.image("https://media.tenor.com/U2wR936x8rcAAAAM/bursting-out-laughing-laughing.gif", use_container_width =True)
+            st.image("https://i.pinimg.com/236x/a0/59/77/a0597759dcc41257b3e0fac0a4854a4b.jpg", use_container_width =True)
         else:
             st.error("Sorry, no jokes found about that subject 🌚")
 
