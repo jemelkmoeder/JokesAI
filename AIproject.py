@@ -8,7 +8,7 @@ df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
 
 # Streamlit interface
-st.title("🎭 Grapgenerator")
+st.title("Joke generator")
 
 censor = st.checkbox("Censureer ongepaste taal")
 subject = st.text_input("Over welk onderwerp wil je een grap horen?")
