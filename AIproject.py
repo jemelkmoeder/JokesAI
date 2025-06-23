@@ -17,7 +17,7 @@ if generate and subject.strip():
 
     if censor:
         profanity.load_censor_words()
-        if profanity.contains_profanity(lower_subject):
+        if profanity.contains_profanity(lower_subject) or "black" in lower_subject:
             st.warning("This subject is inappropriate 😬")
         else:
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
