@@ -9,35 +9,6 @@ blocked_words = ["black", "lack people", "lack person", "ack", "ck people", "ck 
  
 st.title("Joke Generator (English Version)")
 
-st.markdown("""
-<style>
-/* success message - achtergrond minder transparant */
-.stAlert.stAlert-success {
-    background-color: rgba(0, 128, 0, 100) !important;  /* groen, bijna opaque */
-    color: white !important;
-}
-
-/* error message - achtergrond minder transparant */
-.stAlert.stAlert-error {
-    background-color: rgba(255, 0, 0, 100) !important;  /* rood, bijna opaque */
-    color: white !important;
-}
-
-/* warning message */
-.stAlert.stAlert-warning {
-    background-color: rgba(255, 165, 0, 100) !important;  /* oranje, bijna opaque */
-    color: black !important;
-}
-
-/* info message */
-.stAlert.stAlert-info {
-    background-color: rgba(0, 123, 255, 100) !important;  /* blauw, bijna opaque */
-    color: white !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-
 st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/free-vector/flat-comic-style-background-copy-space_52683-54924.jpg?semt=ais_hybrid&w=740");
         background-size: cover;
         background-position: center;
