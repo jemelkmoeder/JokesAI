@@ -30,7 +30,7 @@ if generate and subject.strip():
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
             if not results.empty:
                 selected_joke = random.choice(results.tolist())
-                st.success("Here it comes:")
+                st.info("Here it comes:")
                 st.markdown(f"*****{profanity.censor(selected_joke)}*****")
                 st.image("https://static.vecteezy.com/system/resources/thumbnails/048/560/668/small_2x/cheerful-cute-emoji-png.png", use_container_width =True)
             else:
@@ -39,7 +39,7 @@ if generate and subject.strip():
         results = jokes[jokes.str.lower().str.contains(lower_subject)]
         if not results.empty:
             selected_joke = random.choice(results.tolist())
-            st.success("Here it comes:")
+            st.info("Here it comes:")
             st.markdown(f"*****{selected_joke}*****")
             st.image("https://static.vecteezy.com/system/resources/thumbnails/048/560/668/small_2x/cheerful-cute-emoji-png.png", use_container_width =True)
         else:
