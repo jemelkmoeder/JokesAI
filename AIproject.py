@@ -4,7 +4,7 @@ import random
 from better_profanity import profanity
 
 # Laad dataset
-df = pd.read_csv("C:/Users/jboen/OneDrive/Desktop/AI Informatica/shortjokes.csv")
+df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
 
 # Streamlit interface
