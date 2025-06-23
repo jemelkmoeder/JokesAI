@@ -2,25 +2,24 @@ import streamlit as st
 import pandas as pd
 import random
 from better_profanity import profanity
-
+ 
 # Laad dataset
 df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
-
+ 
 # Streamlit interface
 st.title("Joke Generator (English Version)")
-
+ 
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
-subject = st.text_input("What subject do you want to hear a joke about?")
-generate_button = st.button("Generate Joke")
-
-if generate_button and subject:
+subject = st.text_input("What subject do you want to hear a joke about? ")
+ 
+if subject:
     lower_subject = subject.lower()
-
+ 
     if censor:
         profanity.load_censor_words()
         if profanity.contains_profanity(lower_subject):
-            st.warning("This subject is inappropriate 😬")
+            st.warning("this subject is innapropriate 😬")
         else:
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
             if not results.empty:
