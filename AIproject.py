@@ -28,7 +28,7 @@ if subject:
                 st.success("Here it comes:")
                 st.write(censored_joke)
             else:
-                st.error("Sorry, no jokes found about that subject 😅")
+                st.error("Sorry, no jokes found about that subject 🌚")
     else:
         results = jokes[jokes.str.lower().str.contains(lower_subject)]
         if not results.empty:
@@ -36,4 +36,4 @@ if subject:
             st.success("Here it comes:")
             st.write(selected_joke)
         else:
-            st.error("Sorry, no jokes found about that subject 😅")
+            st.error("Sorry, no jokes found about that subject 🌚")
