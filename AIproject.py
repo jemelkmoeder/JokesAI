@@ -14,6 +14,8 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;}</style>""",unsafe_allow_html=True)
+
+st.markdown("""<style>.stAlert {background-color: #28a745 !important; color: white !important; border-radius: 10px; padding: 1rem;} .stAlert > div:before {display: none;}</style>""", unsafe_allow_html=True)
  
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
 subject = st.text_input("What subject do you want to hear a joke about?")
