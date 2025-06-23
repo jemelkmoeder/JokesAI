@@ -17,13 +17,13 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
 
 st.markdown("""
     <style>
-    .stAlert[data-testid="stAlert-info"] {
+    .stAlert {
         background-color: rgba(23, 162, 184, 0.9) !important;
         color: white !important;
         border-radius: 10px;
         padding: 1rem;
     }
-    .stAlert[data-testid="stAlert-info"] > div:before {
+    .stAlert > div:before {
         display: none;
     }
     </style>
