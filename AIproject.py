@@ -25,6 +25,7 @@ if generate and subject.strip():
                 selected_joke = random.choice(results.tolist())
                 st.success("Here it comes:")
                 st.write(profanity.censor(selected_joke))
+                st.image("https://www.google.com/imgres?q=brainrot%20laugh%20emoji&imgurl=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGLDeWj2X0AA590S.jpg%3Alarge&imgrefurl=https%3A%2F%2Fx.com%2Foperagxofficial%2Fstatus%2F1779166336117010736&docid=nCbytDimTSgaHM&tbnid=h4GpBrK0jNER4M&vet=12ahUKEwi4vLbZvIeOAxWp2gIHHS1vOhsQM3oECBEQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwi4vLbZvIeOAxWp2gIHHS1vOhsQM3oECBEQAA", use_column_width=True)
             else:
                 st.error("Sorry, no jokes found about that subject 🌚")
     else:
@@ -33,6 +34,7 @@ if generate and subject.strip():
             selected_joke = random.choice(results.tolist())
             st.success("Here it comes:")
             st.write(selected_joke)
+            st.image("https://www.google.com/imgres?q=brainrot%20laugh%20emoji&imgurl=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGLDeWj2X0AA590S.jpg%3Alarge&imgrefurl=https%3A%2F%2Fx.com%2Foperagxofficial%2Fstatus%2F1779166336117010736&docid=nCbytDimTSgaHM&tbnid=h4GpBrK0jNER4M&vet=12ahUKEwi4vLbZvIeOAxWp2gIHHS1vOhsQM3oECBEQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwi4vLbZvIeOAxWp2gIHHS1vOhsQM3oECBEQAA", use_column_width=True)
         else:
             st.error("Sorry, no jokes found about that subject 🌚")
 
