@@ -13,25 +13,25 @@ st.markdown("""
 <style>
 /* success message - achtergrond minder transparant */
 .stAlert.stAlert-success {
-    background-color: rgba(0, 128, 0, 0.9) !important;  /* groen, bijna opaque */
+    background-color: rgba(0, 128, 0, 1) !important;  /* groen, bijna opaque */
     color: white !important;
 }
 
 /* error message - achtergrond minder transparant */
 .stAlert.stAlert-error {
-    background-color: rgba(255, 0, 0, 0.9) !important;  /* rood, bijna opaque */
+    background-color: rgba(255, 0, 0, 1) !important;  /* rood, bijna opaque */
     color: white !important;
 }
 
 /* warning message */
 .stAlert.stAlert-warning {
-    background-color: rgba(255, 165, 0, 0.9) !important;  /* oranje, bijna opaque */
+    background-color: rgba(255, 165, 0, 1) !important;  /* oranje, bijna opaque */
     color: black !important;
 }
 
 /* info message */
 .stAlert.stAlert-info {
-    background-color: rgba(0, 123, 255, 0.9) !important;  /* blauw, bijna opaque */
+    background-color: rgba(0, 123, 255, 1) !important;  /* blauw, bijna opaque */
     color: white !important;
 }
 </style>
