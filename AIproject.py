@@ -9,7 +9,7 @@ blocked_words = ["black", "lack people", "lack person", "ack", "ck people", "ck 
  
 st.title("Joke Generator (English Version)")
 
-st.markdown("""<style>.stApp {background-image: url("https://t3.ftcdn.net/jpg/04/19/53/72/360_F_419537270_VlewhB8i8DWpy8i7cSbrJMZtWDNB57TQ.jpg");
+st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/free-vector/flat-comic-style-background-copy-space_52683-54924.jpg?semt=ais_hybrid&w=740");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
