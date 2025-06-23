@@ -5,6 +5,7 @@ from better_profanity import profanity
 
 df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
+blocked_words = ["black", "terrorist", "knee"]
 
 st.title("Joke Generator (English Version)")
 
@@ -17,7 +18,7 @@ if generate and subject.strip():
 
     if censor:
         profanity.load_censor_words()
-        if profanity.contains_profanity(lower_subject) or "black" in lower_subject:
+        if profanity.contains_profanity(lower_subject) or any(word in lower_subject for word in blocked_words):
             st.warning("This subject is inappropriate 😬")
         else:
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
