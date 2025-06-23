@@ -8,7 +8,7 @@ df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
 
 # Streamlit interface
-st.title("Joke Generator")
+st.title("Joke Generator (English Version)")
 
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
 subject = st.text_input("What subject do you want to hear a joke about? ")
