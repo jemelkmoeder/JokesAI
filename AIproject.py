@@ -15,6 +15,20 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
         background-repeat: no-repeat;
         background-attachment: fixed;}</style>""",unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+    .stAlert[data-testid="stAlert-info"] {
+        background-color: rgba(23, 162, 184, 0.9) !important;
+        color: white !important;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .stAlert[data-testid="stAlert-info"] > div:before {
+        display: none;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
 subject = st.text_input("What subject do you want to hear a joke about?")
 generate = st.button("Generate Joke")
