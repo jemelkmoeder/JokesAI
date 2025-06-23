@@ -15,20 +15,6 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
         background-repeat: no-repeat;
         background-attachment: fixed;}</style>""",unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-    .stAlert {
-        background-color: rgba(23, 162, 184, 0.9) !important;
-        color: white !important;
-        border-radius: 10px;
-        padding: 1rem;
-    }
-    .stAlert > div:before {
-        display: none;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
 subject = st.text_input("What subject do you want to hear a joke about?")
 generate = st.button("Generate Joke")
@@ -44,7 +30,7 @@ if generate and subject.strip():
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
             if not results.empty:
                 selected_joke = random.choice(results.tolist())
-                st.info("Here it comes:")
+                st.success("Here it comes:")
                 st.markdown(f"*****{profanity.censor(selected_joke)}*****")
                 st.image("https://static.vecteezy.com/system/resources/thumbnails/048/560/668/small_2x/cheerful-cute-emoji-png.png", use_container_width =True)
             else:
@@ -53,7 +39,7 @@ if generate and subject.strip():
         results = jokes[jokes.str.lower().str.contains(lower_subject)]
         if not results.empty:
             selected_joke = random.choice(results.tolist())
-            st.info("Here it comes:")
+            st.success("Here it comes:")
             st.markdown(f"*****{selected_joke}*****")
             st.image("https://static.vecteezy.com/system/resources/thumbnails/048/560/668/small_2x/cheerful-cute-emoji-png.png", use_container_width =True)
         else:
