@@ -4,14 +4,14 @@ import random
 from better_profanity import profanity
 
 # Laad dataset
-df = pd.read_csv("shortjokes.csv")
+df = pd.read_csv("C:/Users/jboen/OneDrive/Desktop/AI Informatica/shortjokes.csv")
 jokes = df["Joke"].dropna()
 
 # Streamlit interface
-st.title("Joke genarator")
+st.title("🎭 Grapgenerator")
 
-censor = st.checkbox("Do you want to censor the jokes?")
-subject = st.text_input("What subject do you want to hear a joke about? ")
+censor = st.checkbox("Censureer ongepaste taal")
+subject = st.text_input("Over welk onderwerp wil je een grap horen?")
 
 if subject:
     lower_subject = subject.lower()
@@ -19,21 +19,21 @@ if subject:
     if censor:
         profanity.load_censor_words()
         if profanity.contains_profanity(lower_subject):
-            st.warning("this subject is innapropriate 😬")
+            st.warning("Dat onderwerp is ongepast 😬")
         else:
             results = jokes[jokes.str.lower().str.contains(lower_subject)]
             if not results.empty:
                 selected_joke = random.choice(results.tolist())
                 censored_joke = profanity.censor(selected_joke)
-                st.success("Here it comes:")
+                st.success("Hier komt 'ie:")
                 st.write(censored_joke)
             else:
-                st.error("Sorry, no jokes found about that subject 😅")
+                st.error("Sorry, geen grappen gevonden over dat onderwerp 😅")
     else:
         results = jokes[jokes.str.lower().str.contains(lower_subject)]
         if not results.empty:
             selected_joke = random.choice(results.tolist())
-            st.success("Here it comes:")
+            st.success("Hier komt 'ie:")
             st.write(selected_joke)
         else:
-            st.error("Sorry, no jokes found about that subject 😅")
+            st.error("Sorry, geen grappen gevonden over dat onderwerp 😅")
