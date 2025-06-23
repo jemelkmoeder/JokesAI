@@ -5,7 +5,7 @@ from better_profanity import profanity
  
 df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
-blocked_words = ["black", "terrorist", "knee"]
+blocked_words = ["black","lack", "ack", "terrorist", "knee", "grow"]
  
 st.title("Joke Generator (English Version)")
  
