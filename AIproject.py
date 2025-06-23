@@ -3,11 +3,9 @@ import pandas as pd
 import random
 from better_profanity import profanity
 
-# Laad dataset
 df = pd.read_csv("shortjokes.csv")
 jokes = df["Joke"].dropna()
 
-# Streamlit interface
 st.title("Joke Generator (English Version)")
 
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
