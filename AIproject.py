@@ -10,7 +10,7 @@ jokes = df["Joke"].dropna()
 # Streamlit interface
 st.title("Joke Generator")
 
-censor = st.checkbox("Do you want to censor jokes that can be hurtfull to some people? ")
+censor = st.checkbox("Do you want to censor jokes that can be hurtful to some people? ")
 subject = st.text_input("What subject do you want to hear a joke about? ")
 
 if subject:
