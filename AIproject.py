@@ -8,6 +8,12 @@ jokes = df["Joke"].dropna()
 blocked_words = ["black", "lack people", "lack person", "ack", "ck people", "ck person", "k people", "k person", "farming equipment", "terrorist", "knee", "grow", "snickers", "nickers", "nicker", "sickness", "sick", "cancer", "diabetes"]
  
 st.title("Joke Generator (English Version)")
+
+st.markdown("""<style>.stApp {background-image: url("https://t3.ftcdn.net/jpg/04/19/53/72/360_F_419537270_VlewhB8i8DWpy8i7cSbrJMZtWDNB57TQ.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;}</style>""",unsafe_allow_html=True)
  
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
 subject = st.text_input("What subject do you want to hear a joke about?")
