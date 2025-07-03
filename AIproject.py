@@ -3,11 +3,9 @@ import pandas as pd
 import random
 from better_profanity import profanity
  
-# Gebruik de nieuwe dataset met een 'Category'-kolom
 df = pd.read_csv("all_jokes_combined_categorized.csv")
 jokes = df["Joke"].dropna()
-categories = sorted(df["Category"].dropna().unique().tolist())  # ✅ Gesorteerde categorieën
- 
+categories = sorted(df["Category"].dropna().unique().tolist())  
 blocked_words = ["black", "lack people", "lack person", "ack", "ck people", "ck person", "k people", "k person", 
                  "farming equipment", "terrorist", "knee", "grow", "snickers", "nickers", "nicker", 
                  "sickness", "sick", "cancer", "diabetes", "butt", "die", "dying", "death", "dead", "jerking"]
@@ -28,7 +26,6 @@ subject = st.text_input("What subject do you want to hear a joke about?")
 selected_category = st.selectbox("Choose a joke category:", ["Any"] + categories)
 generate = st.button("Generate Joke")
  
-# 🔍 Filterfunctie met onderwerp én/of categorie
 def filter_jokes(subject_text, category_text):
     filtered_df = df
     if category_text != "Any":
